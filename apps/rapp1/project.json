@@ -54,14 +54,14 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/apps/rapp1"],
+      "outputs": ["{workspaceRoot}/coverage/apps/rapp1"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/apps/rapp1"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/rapp1/**/*.{ts,tsx,js,jsx}"]
